@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"node index.js\" \"npm run tailwind\"",
+    "start": "node index.js",
     "dev": "concurrently \"nodemon index.js\" \"npm run tailwind\"",
     "tailwind": "tailwindcss -i ./public/css/input.css -o ./public/css/styles.css --watch"
     
