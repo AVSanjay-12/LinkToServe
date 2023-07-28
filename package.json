@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"nodemon index.js\" \"npm run tailwind\"",
+    "start": "concurrently \"node index.js\" \"npm run tailwind\"",
+    "dev": "concurrently \"nodemon index.js\" \"npm run tailwind\"",
     "tailwind": "tailwindcss -i ./public/css/input.css -o ./public/css/styles.css --watch"
+    
   },
   "keywords": [],
   "author": "",
