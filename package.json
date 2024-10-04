@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "postcss public/css/input.css -o public/css/styles.css",
     "start": "node index.js",
     "dev": "concurrently \"nodemon index.js\" \"npm run tailwind\"",
     "tailwind": "tailwindcss -i ./public/css/input.css -o ./public/css/styles.css --watch"
@@ -12,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.4.20",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
     "connect-mongo": "^5.0.0",
@@ -24,7 +26,8 @@
     "jsonwebtoken": "^9.0.0",
     "method-override": "^3.0.0",
     "mongo-connect": "^0.0.6",
-    "mongoose": "^7.3.0"
+    "mongoose": "^7.3.0",
+    "postcss-cli": "^11.0.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
