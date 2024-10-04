@@ -120,7 +120,7 @@ router.post('/volunteer', async (req,res)=>{
 })
 
 
-//POST volunteer check login
+//POST organization check login
 router.post('/organization', async (req,res)=>{
   try{
     const {username, password} = req.body;
@@ -362,7 +362,7 @@ router.post('/register-volunteer', async (req, res) => {
 
     try {
       const user = await User.create({ username, password:hashedPassword, role: 'volunteer' });
-      res.status(201).json({ message: 'User Created', user });
+      res.send("You have successfully registered! Go back and Sign In")
     } catch (error) {
       if(error.code === 11000) {
         res.status(409).json({ message: 'User already in use'});
@@ -383,7 +383,7 @@ router.post('/register-organization', async (req, res) => {
 
     try {
       const user = await User.create({ username, password:hashedPassword, role: 'organization' });
-      res.status(201).json({ message: 'User Created', user });
+      res.send("You have successfully registered! Go back and Sign In")
     } catch (error) {
       if(error.code === 11000) {
         res.status(409).json({ message: 'User already in use'});

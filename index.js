@@ -38,6 +38,8 @@ app.set('view engine', 'ejs')
 app.use('/', require('./server/routes/main.js'))
 app.use('/', require('./server/routes/admin.js'))
 
-app.listen(PORT, ()=>{
-    console.log(`Server connected to port ${PORT}....`);
-})
+connectDB().then(() =>{
+    app.listen(PORT, ()=>{
+        console.log(`Server connected to port ${PORT}....`);
+    })
+});    
