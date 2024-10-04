@@ -2,17 +2,11 @@
   "name": "linktoserve",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "node app.js",
-    "dev": "concurrently \"nodemon app.js\" \"npm run tailwind\"",
-=======
     "start": "node index.js",
     "dev": "concurrently \"nodemon index.js\" \"npm run tailwind\"",
->>>>>>> 3e1208507d6c420df8a80614163517df3bc36f8b
     "tailwind": "tailwindcss -i ./public/css/input.css -o ./public/css/styles.css --watch"
-    
   },
   "keywords": [],
   "author": "",
